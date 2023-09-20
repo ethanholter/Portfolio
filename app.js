@@ -1,34 +1,18 @@
-const sections = document.querySelectorAll('.section');
-const sectionBtns = document.querySelectorAll('.controls');
-const sectionBtn = document.querySelectorAll('.control');
-const allSections = document.querySelector('.main-content');
+const fadeInItems = document.querySelectorAll('.fade-in');
 
-function PageTransitons() {
-    
-    // Active button switching
-    for (let i = 0; i < sectionBtn.length; i++) {
-        sectionBtn[i].addEventListener('click', function(){
-            let currBtn = document.querySelectorAll('.active-btn');
-            currBtn[0].className = currBtn[0].className.replace('active-btn', '');
-            this.className += ' active-btn';
-        })        
-    }
+fadeInItems.forEach((item) => {
+  
+});
 
-    // Active section switching
-    allSections.addEventListener('click', (e) => { 
-        const id = e.target.dataset.id;
-        if (id) {
-            //scroll to the section with the corresponding id
-            
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+        entry.target.classList.remove('show');
         }
-    })
-    // allSections.forEach((section) => {
+  });
+});
 
-    // })
-}
-
-
-
-
-
-PageTransitons();
+const hiddenItems = document.querySelectorAll('.scroll-fade-in');
+hiddenItems.forEach((item) => observer.observe(item));

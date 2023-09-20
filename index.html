@@ -1,69 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ethan Holter</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="main-content">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">&lt/Home&gt</a></li>
+            <li><a href="#about">&lt/About Me&gt</a></li>
+            <li><a href="#portfolio">&lt/Portfolio&gt</a></li>
+            <li><a href="#contact">&lt/Contact Me&gt</a></li>
+        </ul>
+    </nav>
 
-</head>
-<body class="main-content">
     <header class="section sec1 header active" id="home">
-        <div class="header-content">
-            <div class="left-header">
-                <div class="image">
-                    <img src="img/stair_shot_cropped.jpg" alt="">
-                </div>
-            </div>
-            <div class="right-header">
-                <h1 class="introduction">
-                    Hi, I'm <span class="name">Ethan Holter</span><br>
-                    A programmer and student at <br>
-                    <span class="school">The University of Iowa</span>
-                </h1> <br><br>
-                <a href="https://drive.google.com/uc?export=download&id=19V4UnDOVQ71VYjnzKgr5H0F0StYetVVF" class="main-btn">
-                    <span class="btn-text"">Download Resume <i class="fas fa-download"></i></span>
-                </a>
-            </div>
+      <div class="header-content">
+        <div class="left-header">
+          <div class="image">
+            <img src="img/stair_shot_cropped.jpg" alt="" />
+          </div>
         </div>
+        <div class="right-header">
+          <h1 class="introduction scroll-fade-in">
+            Hi, I'm <span class="name">Ethan Holter</span><br />
+            A programmer and student at <br />
+            <span class="school">The University of Iowa</span>
+          </h1>
+          <br /><br />
+          <a
+            href="https://drive.google.com/uc?export=download&id=19V4UnDOVQ71VYjnzKgr5H0F0StYetVVF"
+            class="main-btn"
+          >
+            <span class="btn-text"">Download Resume <i class="fas fa-download"></i></span>
+          </a>
 
+          <br />
+          <i class="fa-brands fa-github"></i>
+        </div>
+      </div>
     </header>
     <main>
-        <section class="section sec2 about" id="about"></section>
-        <section class="section sec3 portfolio" id="portfolio"></section>
-        <section class="section sec4 projects" id="projects"></section>
-        <section class="section sec5 contact" id="contact"></section>
+      <section class="section sec2 about" id="about">
+        <h1 class="section-title scroll-fade-in">About <span>Me</span></h1>
+        <div class="about-content">
+          <div class="left-header">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Repudiandae accusamus, hic quisquam tempore non earum sunt qui est
+            quos perferendis minus impedit aliquid et natus maxime error
+            assumenda illo voluptatem.
+          </div>
+          <div class="right-header">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium, earum et dignissimos laborum voluptates placeat natus
+            suscipit fuga temporibus quisquam esse voluptatum. Voluptas quidem
+            quasi obcaecati repellat dolorum eligendi porro?
+          </div>
+        </div>
+      </section>
+      <section class="section sec3 portfolio" id="portfolio"></section>
+      <section class="section sec4 contact" id="contact"></section>
     </main>
 
-    <div class="controls">
-        <div class="control control-1 active-btn" data-id="home">
-            <i class="fas fa-home"  data-id="home"></i>
-        </div>
-        <div class="control control-2" data-id="about">
-            <i class="fas fa-user" data-id="about"></i>
-        </div>
-        <div class="control control-3" data-id="portfolio">
-            <i class="fas fa-briefcase" data-id="portfolio"></i>
-        </div>
-        <div class="control control-4" data-id="projects">
-            <i class="fas fa-project-diagram" data-id="projects"></i>
-        </div>
-        <div class="control control-5" data-id="contact">
-            <i class="fas fa-envelope" data-id="contact"></i>
-        </div>
-
-    </div>
-
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
