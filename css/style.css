@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  overflow-x: hidden;
 }
 
 *::-webkit-scrollbar {
@@ -159,18 +160,23 @@ section {
   align-items: center;
   position: relative;
   margin-right: 1rem;
+  overflow: hidden;
 }
 .header-content .left-header img {
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 50vw;
 }
 .header-content .right-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 15rem;
+  padding-right: 6rem;
   z-index: 1;
+  margin: auto;
 }
 .header-content .right-header .introduction {
+  display: block;
   cursor: default;
   font-size: 2rem;
 }
@@ -183,4 +189,13 @@ section {
 }
 .header-content .right-header .introduction .school:hover {
   color: gold;
+}
+.header-content .right-header a {
+  z-index: 2;
+  font-size: 1rem;
+  border: var(--rose) 2px solid;
+  padding: 5px 20px;
+  width: auto;
+  margin-right: auto;
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */
