@@ -18,8 +18,8 @@
 
 :root {
   /* CSS HEX */
-  --color-primary: #050505ff;
-  --color-secondary: rgb(32, 32, 32);
+  --color-primary: #0f0d16;
+  --color-secondary: #08070c;
   --risd-blue: #004fffff;
   --pacific-cyan: #31afd4ff;
   --cordovan: #902d41ff;
@@ -55,6 +55,7 @@ a {
 header {
   height: 100vh;
   color: white;
+  background-image: url("/img/bg.87635d9.webp");
 }
 
 section {
@@ -66,30 +67,11 @@ section {
 }
 
 .section {
-  transition: all 0.4 ease-in-out;
   background-color: var(--color-primary);
-  animation: scaleAnim 0.4s ease-in-out;
-}
-@keyframes scaleAnim {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  100% {
-    transform: translateY(100%) scale(1);
-  }
 }
 
 .section.active {
   display: block !important;
-  animation: scaleAnim 0.4s ease-in-out;
-}
-@keyframes scaleAnim {
-  0% {
-    transform: translateY(-100%) scale(1);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
 }
 
 .sec1 {
@@ -112,40 +94,6 @@ section {
   background-color: var(--color-primary);
 }
 
-.controls {
-  position: fixed;
-  z-index: 10;
-  top: 50%;
-  right: 3%;
-  display: flex;
-  flex-direction: column;
-  transform: translateY(-50%);
-  align-items: center;
-  justify-content: center;
-}
-.controls .active-btn {
-  background-color: var(--rose) !important;
-}
-.controls .active-btn i {
-  color: white;
-}
-.controls .control {
-  padding: 1.2rem;
-  cursor: pointer;
-  background-color: var(--color-secondary);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 0;
-  box-shadow: var(--box-shadow);
-}
-.controls .control i {
-  font-size: 1.2em;
-}
-
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -157,21 +105,20 @@ section {
   width: 50vw;
   height: 100vh;
   display: flex;
-  align-items: center;
   position: relative;
-  margin-right: 1rem;
   overflow: hidden;
 }
 .header-content .left-header img {
   position: absolute;
   top: 0;
+  left: 0;
   width: 50vw;
 }
 .header-content .right-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 6rem;
+  padding: 0 3rem;
   z-index: 1;
   margin: auto;
 }
@@ -198,4 +145,64 @@ section {
   width: auto;
   margin-right: auto;
   border-radius: 20px;
+}
+
+.about {
+  padding: 3rem;
+}
+.about h1 {
+  margin: auto;
+  text-align: center;
+  font-size: 4rem;
+}
+.about h1 span {
+  font-size: 5rem;
+  color: var(--pacific-cyan);
+}
+.about .about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.scroll-fade-in {
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translatex(-20%);
+  filter: blur(10px);
+}
+
+@media (prefers-reduced-motion) {
+  .scroll-fade-in {
+    animation: none;
+    transition: none;
+  }
+}
+.show {
+  opacity: 1;
+  transform: translatex(0%);
+  filter: blur(0px);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  font-size: 2rem;
+  width: 100vw;
+  padding: 0;
+}
+nav .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  text-align: right;
+}
+nav .nav-links li {
+  filter: opacity(0.5);
+  padding: 1rem;
 }/*# sourceMappingURL=style.css.map */
