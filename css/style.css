@@ -24,16 +24,6 @@
   --pacific-cyan: #31afd4ff;
   --cordovan: #902d41ff;
   --rose: #ff007fff;
-  /* CSS HSL */
-  --black: hsla(0, 0%, 2%, 1);
-  --risd-blue: hsla(221, 100%, 50%, 1);
-  --pacific-cyan: hsla(194, 65%, 51%, 1);
-  --cordovan: hsla(348, 52%, 37%, 1);
-  --rose: hsla(330, 100%, 50%, 1);
-  /* SCSS HEX */
-  /* SCSS HSL */
-  /* SCSS RGB */
-  /* SCSS Gradient */
   --box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -148,7 +138,7 @@ section {
 }
 
 .about {
-  padding: 3rem;
+  padding: 3rem 0rem;
 }
 .about h1 {
   margin: auto;
@@ -160,11 +150,46 @@ section {
   color: var(--pacific-cyan);
 }
 .about .about-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
   width: -moz-fit-content;
   width: fit-content;
+  padding: 3rem;
+  overflow: hidden;
+}
+.about .about-content .left-header {
+  overflow: hidden;
+  padding: 3rem 3rem;
+  width: 50vw;
+  font-size: 2rem;
+}
+.about .about-content .left-header h2 {
+  text-align: center;
+}
+.about .about-content .right-header {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 20vw);
+  height: 30rem;
+  overflow: hidden;
+}
+.about .about-content .right-header .skill-box {
+  margin: 0.5rem;
+  background: var(--color-primary);
+  border-radius: 10px;
+  border: 3px solid rgba(49, 175, 212, 0.1843137255);
+  height: 12rem;
+  overflow: hidden;
+}
+.about .about-content .right-header .skill-box .skill-text {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.about .about-content .right-header .skill-box .skill-text span {
+  text-align: left !important;
+  font-size: 6rem;
+  color: var(--rose);
 }
 
 .scroll-fade-in {
@@ -200,7 +225,7 @@ nav .nav-links {
   display: flex;
   flex-direction: row;
   justify-content: right;
-  text-align: right;
+  text-align: left;
 }
 nav .nav-links li {
   filter: opacity(0.5);
