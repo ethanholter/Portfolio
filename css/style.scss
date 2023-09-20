@@ -25,110 +25,8 @@
   --pacific-cyan: #31afd4ff;
   --cordovan: #902d41ff;
   --rose: #ff007fff;
-
-  /* CSS HSL */
-  --black: hsla(0, 0%, 2%, 1);
-  --risd-blue: hsla(221, 100%, 50%, 1);
-  --pacific-cyan: hsla(194, 65%, 51%, 1);
-  --cordovan: hsla(348, 52%, 37%, 1);
-  --rose: hsla(330, 100%, 50%, 1);
-
-  /* SCSS HEX */
-  $black: #050505ff;
-  $risd-blue: #004fffff;
-  $pacific-cyan: #31afd4ff;
-  $cordovan: #902d41ff;
-  $rose: #ff007fff;
-
-  /* SCSS HSL */
-  $black: hsla(0, 0%, 2%, 1);
-  $risd-blue: hsla(221, 100%, 50%, 1);
-  $pacific-cyan: hsla(194, 65%, 51%, 1);
-  $cordovan: hsla(348, 52%, 37%, 1);
-  $rose: hsla(330, 100%, 50%, 1);
-
-  /* SCSS RGB */
-  $black: rgba(5, 5, 5, 1);
-  $risd-blue: rgba(0, 79, 255, 1);
-  $pacific-cyan: rgba(49, 175, 212, 1);
-  $cordovan: rgba(144, 45, 65, 1);
-  $rose: rgba(255, 0, 127, 1);
-
-  /* SCSS Gradient */
-  $gradient-top: linear-gradient(
-    0deg,
-    #050505ff,
-    #004fffff,
-    #31afd4ff,
-    #902d41ff,
-    #ff007fff
-  );
-  $gradient-right: linear-gradient(
-    90deg,
-    #050505ff,
-    #004fffff,
-    #31afd4ff,
-    #902d41ff,
-    #ff007fff
-  );
-  $gradient-bottom: linear-gradient(
-    180deg,
-    #050505ff,
-    #004fffff,
-    #31afd4ff,
-    #902d41ff,
-    #ff007fff
-  );
-  $gradient-left: linear-gradient(
-    270deg,
-    #050505ff,
-    #004fffff,
-    #31afd4ff,
-    #902d41ff,
-    #ff007fff
-  );
-  $gradient-top-right: linear-gradient(
-    45deg,
-    #050505ff,
-    #004fffff,
-    #31afd4ff,
-    #902d41ff,
-    #ff007fff
-  );
-  $gradient-bottom-right: linear-gradient(
-    135deg,
-    #050505ff,
-    #004fffff,
-    #31afd4ff,
-    #902d41ff,
-    #ff007fff
-  );
-  $gradient-top-left: linear-gradient(
-    225deg,
-    #050505ff,
-    #004fffff,
-    #31afd4ff,
-    #902d41ff,
-    #ff007fff
-  );
-  $gradient-bottom-left: linear-gradient(
-    315deg,
-    #050505ff,
-    #004fffff,
-    #31afd4ff,
-    #902d41ff,
-    #ff007fff
-  );
-  $gradient-radial: radial-gradient(
-    #050505ff,
-    #004fffff,
-    #31afd4ff,
-    #902d41ff,
-    #ff007fff
-  );
-
   --box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
-}
+}  
 
 body {
   background-color: var(--color-primary);
@@ -240,7 +138,7 @@ section {
 }
 
 .about {
-  padding: 3rem;
+  padding: 3rem 0rem;
   h1 {
     margin: auto;
     text-align: center;
@@ -253,10 +151,45 @@ section {
   }
 
   .about-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
     width: fit-content;
+    padding: 3rem;
+    overflow: hidden;
+    .left-header {
+      overflow: hidden;
+      padding: 3rem 3rem;
+      width: 50vw;
+      font-size: 2rem;
+      h2 {
+        text-align: center;
+      }
+    }
+    .right-header {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 20vw);
+      height: 30rem;
+      overflow: hidden;
+      .skill-box {
+        margin: 0.5rem;
+        background: var(--color-primary);
+        border-radius: 10px;
+        border: 3px solid #31afd42f;
+        height: 12rem;
+        overflow: hidden;
+        .skill-text {
+          font-size: 1.5rem;
+          text-align: center;
+          span {
+            text-align: left !important;
+            font-size: 6rem;
+            color: var(--rose);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -293,7 +226,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: right;
-    text-align: right;
+    text-align: left;
     li {
       filter: opacity(0.5);
       padding: 1rem;
