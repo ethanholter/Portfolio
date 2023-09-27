@@ -58,6 +58,26 @@ section {
   padding: 3rem 18rem;
 }
 
+.resume-btn {
+  z-index: 2;
+  font-size: 1rem;
+  border: var(--secondary-accent-light) 2px solid;
+  width: auto;
+  margin-right: auto;
+  border-radius: 50ch;
+  display: flex;
+  flex-direction: row;
+}
+.resume-btn span {
+  margin: auto;
+  padding: 0 1rem;
+}
+.resume-btn i {
+  background-color: var(--secondary-accent-light);
+  border-radius: 50%;
+  padding: 10px;
+}
+
 .section {
   background-color: var(--color-primary);
 }
@@ -129,15 +149,6 @@ section {
 .header-content .right-header .introduction .school:hover {
   color: gold;
 }
-.header-content .right-header a {
-  z-index: 2;
-  font-size: 1rem;
-  border: var(--secondary-accent-light) 2px solid;
-  padding: 5px 20px;
-  width: auto;
-  margin-right: auto;
-  border-radius: 20px;
-}
 
 .about {
   padding: 3rem 0rem;
@@ -181,7 +192,6 @@ section {
   background: var(--color-primary);
   border-radius: 10px;
   border: var(--border);
-  height: 12rem;
   overflow: hidden;
 }
 .about .about-content .right-header .skill-box .skill-text {
