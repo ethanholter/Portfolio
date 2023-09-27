@@ -1,89 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethan Holter</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
   </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  <body class="main-content">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">&lt/Home&gt</a></li>
+        <li><a href="#about">&lt/About Me&gt</a></li>
+        <li><a href="#portfolio">&lt/Portfolio&gt</a></li>
+        <li><a href="#contact">&lt/Contact Me&gt</a></li>
+      </ul>
+    </nav>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <header class="section sec1 header active" id="home">
+      <div class="header-content">
+        <div class="left-header">
+          <div class="image">
+            <img src="img/stair_shot_cropped.jpg" alt="" />
+          </div>
+        </div>
+        <div class="right-header">
+          <h1 class="introduction scroll-fade-in">
+            Hi, I'm <span class="name">Ethan Holter</span><br />
+            A programmer and student at <br />
+            <span class="school">The University of Iowa</span>
+          </h1>
+          <br /><br />
+          <a
+            href="https://drive.google.com/file/d/19V4UnDOVQ71VYjnzKgr5H0F0StYetVVF/view?usp=drive_link"
+            class="resume-btn scroll-fade-in"
+            style="--delay: 3"
+          >
+            <span class="resume-btn-text"> View resume </span>
+            <i class="fas fa-download"></i>
+          </a>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+          <br />
+          <!-- <i class="fa-brands fa-github"></i> -->
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section sec2 about" id="about">
+        <h1 class="section-title scroll-fade-in">About <span>Me</span></h1>
+        <div class="about-content">
+          <div class="left-header">
+            <h2>Info about me</h2>
+            I began coding my freshman year of high school and have been
+            improving my skills ever since! I am the software lead of Robotics
+            at Iowa and a member of the Association for Computer Machinery. I
+            love to work on low level projects and experiment with various forms
+            of hardware.
+          </div>
+          <div class="right-header">
+            <div class="skill-box box-1 scroll-fade-in" style="--delay: 11">
+              <div class="skill-text"><span>3.65</span><br />GPA</div>
+            </div>
+            <div class="skill-box box-2 scroll-fade-in" style="--delay: 5">
+              <div class="skill-text">
+                <span>4.5</span><br />Years of programming
+              </div>
+            </div>
+            <div class="skill-box box-3 scroll-fade-in" style="--delay: 14">
+              <div class="skill-text">
+                <span>400+</span><br />Github Contributions
+              </div>
+            </div>
+            <div class="skill-box box-4 scroll-fade-in" style="--delay: 8">
+              <div class="skill-text">
+                <span>6+</span><br />Completed Projects
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-content">
+          <h1>Languages and skills</h1>
+          <div class="skill-icons">
+            <i
+              class="devicon-html5-plain scroll-fade-in"
+              style="--delay: 10"
+            ></i>
+            <i class="devicon-css3-plain scroll-fade-in" style="--delay: 9"></i>
+            <i class="devicon-sass-plain scroll-fade-in" style="--delay: 8"></i>
+            <i
+              class="devicon-javascript-plain scroll-fade-in"
+              style="--delay: 7"
+            ></i>
+            <i
+              class="devicon-python-plain scroll-fade-in"
+              style="--delay: 6"
+            ></i>
+            <i
+              class="devicon-cplusplus-plain scroll-fade-in"
+              style="--delay: 5"
+            ></i>
+            <i class="devicon-java-plain scroll-fade-in" style="--delay: 4"></i>
+            <i
+              class="devicon-linux-plain scroll-fade-in"
+              style="--delay: 3"
+            ></i>
+            <i class="devicon-git-plain scroll-fade-in" style="--delay: 2"></i>
+            <i
+              class="devicon-github-original scroll-fade-in"
+              style="--delay: 1"
+            ></i>
+          </div>
+        </div>
+      </section>
+      <section class="section sec3 portfolio" id="portfolio">
+        <h1 class="scroll-fade-in">My <span>Projects</span></h1>
+        <div class="project-container">
+          <a
+            href="https://github.com/ethanholter/Doodle-Chess"
+            target="_blank"
+            class="project-box project-1 scroll-fade-in"
+            style="--delay: 12"
+          >
+            <img src="img/doodle_chess_thumbnail.png" alt="" />
+          </a>
+          <a
+            href="#home"
+            class="project-box project-2 scroll-fade-in"
+            style="--delay: 8"
+          >
+            <img src="img/portfolio_thumnail.png" alt="" />
+          </a>
+          <a
+            href="https://github.com/ethanholter/NeuralNetwork-Library"
+            target="_blank"
+            class="project-box project-3 scroll-fade-in"
+            style="--delay: 4"
+          >
+            <img src="img/Java_Neural_Net_thumbnail.png" alt="" />
+          </a>
+          <a
+            href="https://github.com/roboticsatiowa"
+            target="_blank"
+            class="project-box project-4 scroll-fade-in"
+            style="--delay: 14"
+          >
+            <img src="img/Robotics-candid.png" alt="" />
+          </a>
+          <a
+            href="https://github.com/ethanholter/NexusAI"
+            target="_blank"
+            class="project-box project-5 scroll-fade-in"
+            style="--delay: 10"
+          >
+            <img src="img/Nexus_AI_thumbnail.png" alt="" />
+          </a>
+          <a
+            href="https://github.com/ethanholter/videosplits"
+            target="_blank"
+            class="project-box project-6 scroll-fade-in"
+            style="--delay: 6"
+          >
+            <img src="img/video_splits_thumbnail.png" alt="" />
+          </a>
+        </div>
+      </section>
+      <section class="section sec4 contact" id="contact"></section>
+    </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
